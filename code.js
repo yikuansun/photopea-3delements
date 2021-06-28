@@ -15,3 +15,10 @@ function getURI() {
 function addToDocument() {
     Photopea.runScript(`app.open("${getURI()}", null, true);`);
 }
+
+function newDoc() {
+    const dimensions = [400, 300];
+    Photopea.runScript(window.parent, `app.documents.add(${dimensions[0]}, ${dimensions[1]}, 72, "Exported");`).then(function() {
+        addToDocument();
+    });
+}
