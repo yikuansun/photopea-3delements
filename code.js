@@ -11,3 +11,7 @@ function getURI() {
     var canvas = clara.player.getCanvasElement();
     return canvas.toDataURL();
 }
+
+function addToDocument() {
+    Photopea.runScript(`app.open("${getURI()}", null, true);`);
+}
