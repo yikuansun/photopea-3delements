@@ -12,6 +12,7 @@ button {
     padding-left: 12px;
     padding-right: 12px;
     transition: 0.5s;
+    outline: none!important;
 }
 
 button:hover {
