@@ -6,3 +6,8 @@ clara.on("loaded", function() {
 
 // Fetch and initialize the sceneId
 clara.sceneIO.fetchAndUse("790976e3-f99c-4f34-b475-f83fa14693b8");
+
+function getURI() {
+    var canvas = clara.player.getCanvasElement();
+    return canvas.toDataURL();
+}
