@@ -23,3 +23,8 @@ button {
 button:hover {
     color: grey;
 }
+
+#clara-embed {
+    background-color: var(--element-bg-color);
+    border-radius: 16.9px;
+}
