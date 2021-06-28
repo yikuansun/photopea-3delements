@@ -1,9 +1,14 @@
+:root {
+    --app-bg-color: #474747;
+    --element-bg-color: #252525;
+}
+
 body {
-    background-color: #474747;
+    background-color: var(--app-bg-color);
 }
 
 button {
-    background-color: #252525;
+    background-color: var(--element-bg-color);
     color: white;
     border-radius: 5px;
     border-style: none;
