@@ -13,7 +13,7 @@ function getURI() {
 }
 
 function addToDocument() {
-    Photopea.runScript(`app.open("${getURI()}", null, true);`);
+    Photopea.runScript(window.parent, `app.open("${getURI()}", null, true);`);
 }
 
 function newDoc() {
