@@ -5,4 +5,4 @@ clara.on("loaded", function() {
 });
 
 // Fetch and initialize the sceneId
-clara.sceneIO.fetchAndUse("36f47863-c0b9-467f-a64f-78e34e2d894e");
+clara.sceneIO.fetchAndUse("790976e3-f99c-4f34-b475-f83fa14693b8");
