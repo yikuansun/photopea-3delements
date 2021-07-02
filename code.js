@@ -67,13 +67,11 @@ async function getLibraryData() {
         }
     }*/
     for (var model of library2) {
-        if (model.variants["glTF-Binary"]) {
-            var data = {};
-            data.name = model.name;
-            data.thumb = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/${model.name}/${model.screenshot}`;
-            data.file = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/${model.name}/glTF-Binary/${model.variants["glTF-Binary"]}`;
-            out.push(data);
-        }
+        var data = {};
+        data.name = model.name;
+        data.thumb = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/${model.name}/${model.screenshot}`;
+        data.file = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/${model.name}/glTF/${model.variants.glTF}`;
+        out.push(data);
     }
     return out;
 }
