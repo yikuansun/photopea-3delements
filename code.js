@@ -37,3 +37,43 @@ function uploadFromDevice() {
     });
     input.click();
 }
+
+async function fetchHTTP(url) {
+    var myPromise = new Promise(function(resolve, reject) {
+        var xhttp = new XMLHttpRequest();
+
+        xhttp.onload = function() {
+            resolve(this.responseText);
+        };
+
+        xhttp.open("GET", url);
+        xhttp.send();
+    });
+
+    return await myPromise;
+}
+
+async function getLibraryData() {
+    var library1 = JSON.parse(await fetchHTTP("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/1.0/model-index.json"));
+    var library2 = JSON.parse(await fetchHTTP("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/model-index.json"));
+    var out = [];
+    for (var model of library1) {
+        if (model.variants["glTF-Binary"]) {
+            var data = {};
+            data.name = model.name;
+            data.thumb = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/1.0/${model.name}/${model.screenshot}`;
+            data.file = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/1.0/${model.name}/glTF-Binary/${model.variants["glTF-Binary"]}`;
+            out.push(data);
+        }
+    }
+    for (var model of library2) {
+        if (model.variants["glTF-Binary"]) {
+            var data = {};
+            data.name = model.name;
+            data.thumb = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/${model.name}/${model.screenshot}`;
+            data.file = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/${model.name}/glTF-Binary/${model.variants["glTF-Binary"]}`;
+            out.push(data);
+        }
+    }
+    return out;
+}
