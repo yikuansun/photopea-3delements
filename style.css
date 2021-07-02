@@ -45,4 +45,5 @@ model-viewer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) translateY(200px);
+    width: 350px;
 }
