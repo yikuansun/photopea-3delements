@@ -25,7 +25,7 @@ button:hover {
     color: grey;
 }
 
-#clara-embed {
+model-viewer {
     background-color: var(--element-bg-color);
     border-radius: 16.9px;
 }
