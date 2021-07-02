@@ -9,7 +9,7 @@ function addToDocument() {
 }
 
 function newDoc() {
-    const dimensions = [342, 342];
+    const dimensions = [1000, 1000];
     Photopea.runScript(window.parent, `app.documents.add(${dimensions[0]}, ${dimensions[1]}, 72, "Exported");`).then(function() {
         addToDocument();
     });
