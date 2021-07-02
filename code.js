@@ -65,7 +65,7 @@ async function getLibraryData() {
         var options = {
             method: "GET",
             headers: {
-                Authorization: "Bearer eWlrdWFuczo4YTEwYzNkNi0zNDdjLTQ2NDMtYTEwMi1lODQyYjgxMzUxMjQ=",
+                Authorization: "Basic eWlrdWFuczo4YTEwYzNkNi0zNDdjLTQ2NDMtYTEwMi1lODQyYjgxMzUxMjQ=",
             },
             mode: "cors"
         };
