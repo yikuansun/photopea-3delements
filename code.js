@@ -54,26 +54,26 @@ async function fetchHTTP(url) {
 }
 
 async function getLibraryData() {
-    var library = JSON.parse(await fetchHTTP("https://clara.io/api/scenes?page=1&perPage=100&type=library")).models;
+    //var library1 = JSON.parse(await fetchHTTP("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/1.0/model-index.json"));
+    var library2 = JSON.parse(await fetchHTTP("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/model-index.json"));
     var out = [];
-    for (var model of library) {
-        var data = {};
-        data.name = model.name;
-        data.thumb = `https://clara.io/api/scenes/${model._id}/thumbnail.jpg`;
-
-        var url = `https://clara.io/api/scenes/${model._id}/export/glb?zip=false&centerScene=false`;
-        var options = {
-            method: "GET",
-            headers: {
-                Authorization: "Basic eWlrdWFuczo4YTEwYzNkNi0zNDdjLTQ2NDMtYTEwMi1lODQyYjgxMzUxMjQ=",
-            },
-            mode: "cors"
-        };
-        fetch(url, options).then(response => response.blob()).then(function(blob) {
-            data.file = URL.createObjectURL(blob);
-        });
-
-        out.push(data);
+    /*for (var model of library1) {
+        if (model.variants["glTF-Binary"]) {
+            var data = {};
+            data.name = model.name;
+            data.thumb = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/1.0/${model.name}/${model.screenshot}`;
+            data.file = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/1.0/${model.name}/glTF-Binary/${model.variants["glTF-Binary"]}`;
+            out.push(data);
+        }
+    }*/
+    for (var model of library2) {
+        if (model.variants["glTF-Binary"]) {
+            var data = {};
+            data.name = model.name;
+            data.thumb = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/${model.name}/${model.screenshot}`;
+            data.file = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/${model.name}/glTF-Binary/${model.variants["glTF-Binary"]}`;
+            out.push(data);
+        }
     }
     return out;
 }
