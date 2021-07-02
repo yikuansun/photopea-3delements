@@ -82,3 +82,13 @@ model-viewer {
     display: none;
     transition: 1s;
 }
+
+.libraryThumb {
+    cursor: pointer;
+    width: 18vw;
+    height: 18vw;
+    margin: 1vw;
+    border-radius: 3.5vw;
+    transition: 1s;
+    background-color: var(--element-bg-color);
+}

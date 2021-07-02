@@ -89,6 +89,7 @@ getLibraryData().then(function(library) {
             modelViewer.src = "${model.file}";
             hideLibrary();
         `));
+        img.className = "libraryThumb";
         document.querySelector("#libraryselect").appendChild(img);
     }
 });
