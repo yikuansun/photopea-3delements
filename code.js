@@ -18,6 +18,7 @@ function newDoc() {
 function uploadFromDevice() {
     var input = document.createElement("input");
     input.type = "file";
+    input.accept = "model/gltf-binary";
     input.style.visibility = "hidden";
     document.body.appendChild(input);
     input.addEventListener("change", function() {
@@ -25,7 +26,7 @@ function uploadFromDevice() {
         var fileReader = new FileReader();
         fileReader.onloadend = function(e) {
             var arrayBuffer = e.target.result;
-            var fileType = "application/glb";
+            var fileType = input.accept;
             var blob = new Blob([arrayBuffer], { type: fileType });
             var URI = URL.createObjectURL(blob);
             console.log(URI);
