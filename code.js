@@ -62,7 +62,7 @@ async function getLibraryData() {
         data.thumb = `https://clara.io/api/scenes/${model._id}/thumbnail.jpg`;
 
         var xhttp = new XMLHttpRequest();
-        xhttp.open("GET", `https://clara.io/api/scenes/${model._id}/export/glb?zip=false`, false);
+        xhttp.open("GET", `https://clara.io/api/scenes/${model._id}/export/glb?zip=false&centerScene=false`, false);
         xhttp.setRequestHeader("Authorization", "Basic eWlrdWFuczo4YTEwYzNkNi0zNDdjLTQ2NDMtYTEwMi1lODQyYjgxMzUxMjQ=");
         xhttp.withCredentials = true;
         xhttp.send();
