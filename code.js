@@ -80,8 +80,8 @@ async function getLibraryData() {
 
 getLibraryData().then(function(library) {
     for (var model of library) {
-        var img = document.createElement("img");
-        img.src = model.thumb;
+        var img = document.createElement("div");
+        img.style.backgroundImage = `url("${model.thumb}")`;
         img.style.cursor = "pointer";
         img.alt = model.name;
         img.addEventListener("click", new Function(`

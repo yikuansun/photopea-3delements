@@ -85,10 +85,15 @@ model-viewer {
 
 .libraryThumb {
     cursor: pointer;
-    width: 18vw;
-    height: 18vw;
-    margin: 1vw;
-    border-radius: 3.5vw;
+    width: 23%;
+    padding-bottom: 23%;
+    margin: 1%;
+    border-radius: 6%;
+    object-fit: fill;
     transition: 1s;
     background-color: var(--element-bg-color);
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
