@@ -6,6 +6,7 @@
 body {
     background-color: var(--app-bg-color);
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 button {
