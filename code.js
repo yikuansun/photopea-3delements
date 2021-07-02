@@ -31,6 +31,7 @@ function uploadFromDevice() {
             var URI = URL.createObjectURL(blob);
             console.log(URI);
             modelViewer.src = URI;
+            input.remove();
         };
         fileReader.readAsArrayBuffer(file);
     });
