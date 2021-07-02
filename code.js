@@ -14,3 +14,24 @@ function newDoc() {
         addToDocument();
     });
 }
+
+function uploadFromDevice() {
+    var input = document.createElement("input");
+    input.type = "file";
+    input.style.visibility = "hidden";
+    document.body.appendChild(input);
+    input.addEventListener("change", function() {
+        var file = this.files[0];
+        var fileReader = new FileReader();
+        fileReader.onloadend = function(e) {
+            var arrayBuffer = e.target.result;
+            var fileType = "application/glb";
+            var blob = new Blob([arrayBuffer], { type: fileType });
+            var URI = URL.createObjectURL(blob);
+            console.log(URI);
+            modelViewer.src = URI;
+        };
+        fileReader.readAsArrayBuffer(file);
+    });
+    input.click();
+}
