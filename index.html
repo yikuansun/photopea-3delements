@@ -9,7 +9,7 @@
             <div id="selectpanel">
                 <button onclick="uploadFromDevice();">Import Model</button>
                 or
-                <button>Choose from library</button>
+                <button onclick="showLibrary();">Choose from library</button>
             </div>
             <model-viewer src="test/Astronaut.glb" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" camera-controls></model-viewer>
             <br />
@@ -18,6 +18,8 @@
                 <button onclick="addToDocument();">Add New Layer</button>
             </div>
         </center>
+        <div id="wall" onclick="hideLibrary();"></div>
+        <div id="libraryselect"></div>
         <script src="https://clara.io/js/claraplayer.min.js"></script>
         <script src="lib/photopea.min.js"></script>
         <script src="code.js"></script>

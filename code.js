@@ -54,10 +54,10 @@ async function fetchHTTP(url) {
 }
 
 async function getLibraryData() {
-    var library1 = JSON.parse(await fetchHTTP("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/1.0/model-index.json"));
+    //var library1 = JSON.parse(await fetchHTTP("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/1.0/model-index.json"));
     var library2 = JSON.parse(await fetchHTTP("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/model-index.json"));
     var out = [];
-    for (var model of library1) {
+    /*for (var model of library1) {
         if (model.variants["glTF-Binary"]) {
             var data = {};
             data.name = model.name;
@@ -65,7 +65,7 @@ async function getLibraryData() {
             data.file = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/1.0/${model.name}/glTF-Binary/${model.variants["glTF-Binary"]}`;
             out.push(data);
         }
-    }
+    }*/
     for (var model of library2) {
         if (model.variants["glTF-Binary"]) {
             var data = {};
@@ -76,4 +76,29 @@ async function getLibraryData() {
         }
     }
     return out;
+}
+
+getLibraryData().then(function(library) {
+    for (var model of library) {
+        var img = document.createElement("img");
+        img.src = model.thumb;
+        img.style.cursor = "pointer";
+        img.alt = model.name;
+        img.addEventListener("click", new Function(`
+            console.log("${model.file}");
+            modelViewer.src = "${model.file}";
+            hideLibrary();
+        `));
+        document.querySelector("#libraryselect").appendChild(img);
+    }
+});
+
+function showLibrary() {
+    document.querySelector("#wall").style.display = "block";
+    document.querySelector("#libraryselect").style.display = "block";
+}
+
+function hideLibrary() {
+    document.querySelector("#wall").style.display = "none";
+    document.querySelector("#libraryselect").style.display = "none";
 }
