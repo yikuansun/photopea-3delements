@@ -9,10 +9,16 @@ function addToDocument() {
 }
 
 function newDoc() {
-    const dimensions = [1000, 1000];
-    Photopea.runScript(window.parent, `app.documents.add(${dimensions[0]}, ${dimensions[1]}, 72, "Exported");`).then(function() {
-        addToDocument();
-    });
+    function toArrayBuffer(dataURL) {
+        var base64 = dataURL.split(';base64,')[1];
+        var binary_string = window.atob(base64);
+        var bytes = new Uint8Array(binary_string.length);
+        for (var i = 0; i < binary_string.length; i++) {
+            bytes[i] = binary_string.charCodeAt(i);
+        }
+        return bytes.buffer;
+    }
+    Photopea.addBinaryAsset(window.parent, toArrayBuffer(getURI()));
 }
 
 function uploadFromDevice() {
