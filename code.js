@@ -61,7 +61,13 @@ async function fetchHTTP(url) {
 
 async function getLibraryData() {
     //var library1 = JSON.parse(await fetchHTTP("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/1.0/model-index.json"));
-    var library2 = JSON.parse(await fetchHTTP("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/model-index.json"));
+    var library2 = (await ((await fetch("https://api.sketchfab.com/v3/search?type=models&downloadable=true&sort_by=likeCount", {
+        method: "GET",
+        headers: {
+            Authorization: "Token --",
+        },
+        mode: "cors"
+    })).json())).results;
     var out = [];
     /*for (var model of library1) {
         if (model.variants["glTF-Binary"]) {
@@ -75,8 +81,20 @@ async function getLibraryData() {
     for (var model of library2) {
         var data = {};
         data.name = model.name;
-        data.thumb = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/${model.name}/${model.screenshot}`;
-        data.file = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/${model.name}/glTF/${model.variants.glTF}`;
+        data.thumb = model.thumbnails.images[0].url;
+        //data.file = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/${model.name}/glTF/${model.variants.glTF}`;
+        fetch(`https://api.sketchfab.com/v3/models/${model.uid}/download`, {
+            method: "GET",
+            headers: {
+                Authorization: "Token --",
+            },
+            mode: "cors"
+        }).then(function(response){
+            return response.json();
+        }).then(function(responseData){
+            console.log(responseData);
+            data.file = responseData.gltf.url;
+        });
         out.push(data);
     }
     return out;
