@@ -25,7 +25,7 @@ function uploadFromDevice() {
     var input = document.createElement("input");
     input.type = "file";
     input.accept = "model/gltf-binary";
-    input.style.visibility = "hidden";
+    input.style.display = "none";
     document.body.appendChild(input);
     input.addEventListener("change", function() {
         var file = this.files[0];
