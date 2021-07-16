@@ -94,7 +94,7 @@ getLibraryData().then(function(library) {
             hideLibrary();
         `));
         img.className = "libraryThumb";
-        document.querySelector("#libraryselect").appendChild(img);
+        document.querySelector("#library_content").appendChild(img);
     }
 });
 

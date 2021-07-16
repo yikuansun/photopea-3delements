@@ -79,13 +79,19 @@ model-viewer {
     transform: translate(-50%, -50%);
     width: 100vw;
     height: 100vh;
-    overflow: auto;
+    overflow: hidden;
     display: none;
     transition: 1s;
 }
 
+#library_content {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
 #x {
-    position: sticky;
+    position: fixed;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
     top: 13.8px;
