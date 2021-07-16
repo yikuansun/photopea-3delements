@@ -99,11 +99,9 @@ getLibraryData().then(function(library) {
 });
 
 function showLibrary() {
-    document.querySelector("#wall").style.display = "block";
-    document.querySelector("#libraryselect").style.display = "block";
+    document.querySelector("#libraryselect").style.left = "0";
 }
 
 function hideLibrary() {
-    document.querySelector("#wall").style.display = "none";
-    document.querySelector("#libraryselect").style.display = "none";
+    document.querySelector("#libraryselect").style.left = "-100%";
 }
