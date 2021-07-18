@@ -130,6 +130,8 @@ model-viewer {
     border-radius: 100px;
     background-color: var(--element-bg-color);
     color: white;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
 }
 
 #search:focus {
