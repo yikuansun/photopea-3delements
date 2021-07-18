@@ -1,3 +1,13 @@
+var thumbURL;
+document.querySelector("input[name=thumbnail]").addEventListener("change", function() {
+    var file = this.files[0];
+    var fileReader = new FileReader();
+    fileReader.onloadend = function(e) {
+        thumbURL = e.target.result;
+    };
+    fileReader.readAsDataURL(file);
+});
+
 var fileURL;
 document.querySelector("input[name=model]").addEventListener("change", function() {
     var file = this.files[0];
