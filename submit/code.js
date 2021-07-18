@@ -39,9 +39,12 @@ async function handleSubmit(event) {
     }).then(function(response) {
         status.innerHTML = "Thanks for your submission!";
         form.reset();
+        document.body.style.cursor = "";
     }).catch(function(error) {
-        status.innerHTML = "Oops! There was a problem submitting your form"
+        status.innerHTML = "Oops! There was a problem submitting your form";
+        document.body.style.cursor = "";
     });
+    document.body.style.cursor = "wait";
 }
 
 form.addEventListener("submit", handleSubmit);
