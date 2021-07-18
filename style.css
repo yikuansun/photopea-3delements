@@ -132,6 +132,7 @@ model-viewer {
     color: white;
     margin-top: 4vw;
     margin-bottom: 4vw;
+    border: none;
 }
 
 #search:focus {
