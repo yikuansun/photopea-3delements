@@ -30,6 +30,7 @@ async function handleSubmit(event) {
             data: JSON.stringify({
                 name: document.querySelector("input[name=modelname]").value,
                 author: document.querySelector("input[name=authorname]").value,
+                thumbnail: thumbURL,
                 model: fileURL
             })
         }),
