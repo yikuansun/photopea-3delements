@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Submit a 3D model to Photopea</title>
+    </head>
+    <body>
+        <form id="my-form" action="https://formspree.io/f/mgerlnwy" method="POST">
+            <label>Your Email:</label>
+            <input type="email" name="email" />
+            <br />
+            <label>Model Name:</label>
+            <input type="text" name="modelname" required />
+            <br />
+            <label>Author Name/Alias:</label>
+            <input type="text" name="authorname" required />
+            <br />
+            <label>Upload Model Here:</label>
+            <input type="file" name="model" accept="model/gltf-binary" required />
+            <br />
+            <button id="my-form-button">Submit</button>
+            <p id="my-form-status"></p>
+        </form>
+        <script src="code.js"></script>
+    </body>
+</html>
