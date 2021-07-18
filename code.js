@@ -60,23 +60,13 @@ async function fetchHTTP(url) {
 }
 
 async function getLibraryData() {
-    //var library1 = JSON.parse(await fetchHTTP("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/1.0/model-index.json"));
-    var library2 = JSON.parse(await fetchHTTP("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/model-index.json"));
+    var library2 = JSON.parse(await fetchHTTP("https://raw.githubusercontent.com/yikuansun/photopea-3delements/master/data/models.json"));
     var out = [];
-    /*for (var model of library1) {
-        if (model.variants["glTF-Binary"]) {
-            var data = {};
-            data.name = model.name;
-            data.thumb = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/1.0/${model.name}/${model.screenshot}`;
-            data.file = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/1.0/${model.name}/glTF-Binary/${model.variants["glTF-Binary"]}`;
-            out.push(data);
-        }
-    }*/
     for (var model of library2) {
         var data = {};
         data.name = model.name;
-        data.thumb = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/${model.name}/${model.screenshot}`;
-        data.file = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/${model.name}/glTF/${model.variants.glTF}`;
+        data.thumb = model.thumbnail;
+        data.file = model.model;
         out.push(data);
     }
     return out;
