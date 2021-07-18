@@ -122,3 +122,17 @@ model-viewer {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+#search {
+    padding: 10px;
+    width: 96%;
+    box-sizing: border-box;
+    border-radius: 100px;
+    background-color: var(--element-bg-color);
+    color: white;
+}
+
+#search:focus {
+    outline: none!important;
+    box-shadow: 0 0 0 3px rgba(54, 95, 199, 0.5);
+}

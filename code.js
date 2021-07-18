@@ -97,3 +97,14 @@ function hideLibrary() {
     document.querySelector("#wall").style.display = "none";
     document.querySelector("#libraryselect").style.left = "-100%";
 }
+
+document.querySelector("#search").addEventListener("input", function() {
+    for (var x of document.querySelectorAll(".libraryThumb")) {
+        if (x.alt.toLowerCase().includes(this.value.toLowerCase())) {
+            x.style.display = "inline-block";
+        }
+        else {
+            x.style.display = "none";
+        }
+    }
+});
