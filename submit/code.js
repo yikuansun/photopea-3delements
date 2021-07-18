@@ -1,23 +1,3 @@
-var thumbURL;
-document.querySelector("input[name=thumbnail]").addEventListener("change", function() {
-    var file = this.files[0];
-    var fileReader = new FileReader();
-    fileReader.onloadend = function(e) {
-        thumbURL = e.target.result;
-    };
-    fileReader.readAsDataURL(file);
-});
-
-var fileURL;
-document.querySelector("input[name=model]").addEventListener("change", function() {
-    var file = this.files[0];
-    var fileReader = new FileReader();
-    fileReader.onloadend = function(e) {
-        fileURL = e.target.result;
-    };
-    fileReader.readAsDataURL(file);
-});
-
 var form = document.getElementById("my-form");
 
 async function handleSubmit(event) {
@@ -30,8 +10,8 @@ async function handleSubmit(event) {
             data: JSON.stringify({
                 name: document.querySelector("input[name=modelname]").value,
                 author: document.querySelector("input[name=authorname]").value,
-                thumbnail: thumbURL,
-                model: fileURL
+                thumbnail: document.querySelector("input[name=thumbnail]").value,
+                model: document.querySelector("input[name=model]").value
             })
         }),
         headers: {
