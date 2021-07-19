@@ -64,7 +64,7 @@ async function getLibraryData() {
     var out = [];
     for (var model of library2) {
         var data = {};
-        data.name = model.name;
+        data.name = model.modelname;
         data.thumb = model.thumbnail;
         data.file = model.model;
         out.push(data);
