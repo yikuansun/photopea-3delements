@@ -60,13 +60,15 @@ async function fetchHTTP(url) {
 }
 
 async function getLibraryData() {
-    var library2 = JSON.parse(await fetchHTTP("https://raw.githubusercontent.com/yikuansun/photopea-3delements/master/data/models.json"));
+    var csv = await fetchHTTP("https://raw.githubusercontent.com/yikuansun/photopea-3delements/master/data/formsubmission.csv");
+    var table = CSVToArray(csv);
     var out = [];
-    for (var model of library2) {
+    for (var i = 1; i < table.length; i++) {
+        var model = table[i];
         var data = {};
-        data.name = model.name;
-        data.thumb = model.thumbnail;
-        data.file = model.model;
+        data.name = model[1];
+        data.thumb = JSON.parse(model[3]).url;
+        data.file = JSON.parse(model[4]).url;
         out.push(data);
     }
     return out;
