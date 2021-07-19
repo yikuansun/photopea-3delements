@@ -10,7 +10,7 @@
             <br /><a href="https://www.dropboxforum.com/t5/Dropbox-files-folders/public-links-to-raw-files/m-p/110392/highlight/true#M87997" target="_blank">How to do this in Dropbox</a>
             <br /><a href="https://sites.google.com/site/gdocs2direct/" target="_blank">How to do this in Google Drive</a>
         </p>
-        <form id="my-form" action="https://formspree.io/f/mgerlnwy" method="POST">
+        <form id="my-form" method="POST" enctype="multipart/form-data" data-netlify="true">
             <label>Your Email:</label>
             <input type="email" name="email" />
             <br />
@@ -27,8 +27,6 @@
             <input type="url" name="model" required />
             <br />
             <button id="my-form-button">Submit</button>
-            <p id="my-form-status"></p>
         </form>
-        <script src="code.js"></script>
     </body>
 </html>
