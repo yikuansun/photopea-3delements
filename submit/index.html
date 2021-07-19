@@ -20,11 +20,11 @@
             <label>Author Name/Alias:</label>
             <input type="text" name="authorname" required />
             <br />
-            <label>Model Thumbnail URL:</label>
-            <input type="url" name="thumbnail" required />
+            <label>Model Thumbnail:</label>
+            <input type="file" name="thumbnail" accept="image/png, image/jpeg, image/bmp" required />
             <br />
-            <label>Model gltf/glb URL:</label>
-            <input type="url" name="model" required />
+            <label>Model gltf/glb:</label>
+            <input type="file" name="model" accept="model/gltf+json, model/gltf-binary" required />
             <br />
             <button id="my-form-button">Submit</button>
         </form>
