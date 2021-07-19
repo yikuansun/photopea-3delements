@@ -20,7 +20,7 @@ var modelUpload = Dropbox.createChooseButton({
     extensions: ['.gltf', '.glb'],
     folderselect: false
 });
-document.getElementById("model").appendChild(modelUpload);
+document.getElementById("thumbnail").appendChild(modelUpload);
 
 async function handleSubmit(event) {
     event.preventDefault();
