@@ -1,9 +1,18 @@
 [
-    {"name":"Astronaut","author":"Google","thumbnail":"https://developers.google.com/web/updates/images/2019/02/space-suit.png","model":"https://modelviewer.dev/shared-assets/models/Astronaut.glb"},
-    {"name":"Damaged Helmet","author":"Khronos Group","thumbnail":"https://user-images.githubusercontent.com/2693840/87886578-aab46480-ca1e-11ea-99b9-0c7b8b4f0382.png","model":"https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/DamagedHelmet/glTF-Binary/DamagedHelmet.glb"},
-    {"name":"Lantern","author":"Khronos Group","thumbnail":"https://user-images.githubusercontent.com/7625588/51786909-c5997600-21a5-11e9-815a-97f94376b39d.png","model":"https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/Lantern/glTF-Binary/Lantern.glb"},
-    {"name":"Corset","author":"Khronos Group","thumbnail":"https://modelviewer.dev/fidelity/results/khronos-Corset/gltf-sample-viewer-golden.png","model":"https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/Corset/glTF-Binary/Corset.glb"},
-    {"name":"Boombox","author":"Khronos Group","thumbnail":"https://modelviewer.dev/fidelity/results/khronos-BoomBox/gltf-sample-viewer-golden.png","model":"https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/BoomBox/glTF-Binary/BoomBox.glb"},
-    {"name":"Seashell","author":"mostafa","thumbnail":"https://creazilla-store.fra1.digitaloceanspaces.com/three_d_models/67203/argopecten-gibbus-pri-50125-3d-model-43844-md.jpeg","model":"https://drive.google.com/uc?export=download&id=1x8DLWKQJR9efBB-H96ckkr07VBPNbXs9"},
-    {"name":"Avocado","author":"Khronos Group","thumbnail":"https://github.com/KhronosGroup/glTF-Sample-Models/blob/master/2.0/Avocado/screenshot/screenshot.jpg?raw=true","model":"https://dl.dropbox.com/s/aw9mlsh1cqpuxz8/Avocado.glb?dl=0"}
+  {
+    "modelname": "Avocado",
+    "authorname": "Khronos Group",
+    "thumbnail": {
+      "filename": "screenshot.jpg",
+      "type": "image/jpeg",
+      "size": 3414,
+      "url": "https://d33wubrfki0l68.cloudfront.net/63b12988-4b7d-4180-905c-64d9360f0090/screenshot.jpg"
+    },
+    "model": {
+      "filename": "Avocado.glb",
+      "type": "application/octet-stream",
+      "size": 8328156,
+      "url": "https://d33wubrfki0l68.cloudfront.net/85c5bc2d-d645-442f-9a53-777d5b3800d0/Avocado.glb"
+    }
+  }
 ]
