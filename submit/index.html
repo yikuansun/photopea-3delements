@@ -21,14 +21,19 @@
             <input type="text" name="authorname" required />
             <br />
             <label>Model Thumbnail URL:</label>
-            <input type="url" name="thumbnail" required />
+            <div id="thumbnail">
+                <input type="hidden" name="thumbnail" required />
+            </div>
             <br />
             <label>Model gltf/glb URL:</label>
-            <input type="url" name="model" required />
+            <div id="model">
+                <input type="hidden" name="model" required />
+            </div>
             <br />
             <button id="my-form-button">Submit</button>
             <p id="my-form-status"></p>
         </form>
+        <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="qnqp9gho2e2pvji"></script>
         <script src="code.js"></script>
     </body>
 </html>

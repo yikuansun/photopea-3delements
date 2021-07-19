@@ -1,5 +1,27 @@
 var form = document.getElementById("my-form");
 
+var thumbButton = Dropbox.createChooseButton({
+    success: function(files) {
+        document.querySelector("input[name=thumbnail]").value = files[0].link;
+    },
+    linkType: "direct",
+    multiselect: false,
+    extensions: ['.png', '.jpg', '.svg', '.bmp'],
+    folderselect: false
+});
+document.getElementById("thumbnail").appendChild(thumbButton);
+
+var modelUpload = Dropbox.createChooseButton({
+    success: function(files) {
+        document.querySelector("input[name=model]").value = files[0].link;
+    },
+    linkType: "direct",
+    multiselect: false,
+    extensions: ['.gltf', '.glb'],
+    folderselect: false
+});
+document.getElementById("thumbnail").appendChild(modelUpload);
+
 async function handleSubmit(event) {
     event.preventDefault();
     var status = document.getElementById("my-form-status");
