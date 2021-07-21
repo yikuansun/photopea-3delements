@@ -5,7 +5,7 @@
     </head>
     <body>
         <h3>Submit a model</h3>
-        <form id="my-form" method="POST" enctype="multipart/form-data" data-netlify="true">
+        <form id="my-form" method="POST" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field">
             <label>Your Email:</label>
             <input type="email" name="email" />
             <br />
@@ -21,6 +21,9 @@
             <label>Model gltf/glb:</label>
             <input type="file" name="model" accept="model/gltf+json, model/gltf-binary" required />
             <br />
+            <p class="hidden">
+                <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+            </p>            
             <button id="my-form-button">Submit</button>
         </form>
         <script>if (location.host == "yikuansun.github.io") location.replace("https://submit3dphotopea.netlify.app/");</script>
