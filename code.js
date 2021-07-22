@@ -61,13 +61,7 @@ async function fetchHTTP(url) {
 
 async function getLibraryData() {
     //var library1 = JSON.parse(await fetchHTTP("https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/1.0/model-index.json"));
-    var library2 = (await ((await fetch("https://api.sketchfab.com/v3/search?type=models&downloadable=true&sort_by=likeCount", {
-        method: "GET",
-        headers: {
-            Authorization: "Token --",
-        },
-        mode: "cors"
-    })).json())).results;
+    var library2 = JSON.parse(await fetchHTTP("https://api.sketchfab.com/v3/search?type=models&downloadable=true&sort_by=likeCount")).results;
     var out = [];
     /*for (var model of library1) {
         if (model.variants["glTF-Binary"]) {
