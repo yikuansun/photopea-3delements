@@ -77,18 +77,7 @@ async function getLibraryData() {
         data.name = model.name;
         data.thumb = model.thumbnails.images[0].url;
         //data.file = `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/${model.name}/glTF/${model.variants.glTF}`;
-        fetch(`https://api.sketchfab.com/v3/models/${model.uid}/download`, {
-            method: "GET",
-            headers: {
-                Authorization: "Token --",
-            },
-            mode: "cors"
-        }).then(function(response){
-            return response.json();
-        }).then(function(responseData){
-            console.log(responseData);
-            data.file = responseData.gltf.url;
-        });
+        data.downloadurl = `https://api.sketchfab.com/v3/models/${model.uid}/download`;
         out.push(data);
     }
     return out;
@@ -101,9 +90,19 @@ getLibraryData().then(function(library) {
         img.style.cursor = "pointer";
         img.alt = model.name;
         img.addEventListener("click", new Function(`
-            console.log("${model.file}");
-            modelViewer.src = "${model.file}";
-            hideLibrary();
+            fetch("${model.downloadurl}", {
+                method: "GET",
+                headers: {
+                    Authorization: "Token --",
+                },
+                mode: "cors"
+            }).then(function(response){
+                return response.json();
+            }).then(function(responseData){
+                console.log(responseData);
+                modelViewer.src = responseData.gltf.url;
+                hideLibrary();
+            });
         `));
         img.className = "libraryThumb";
         document.querySelector("#libraryselect").appendChild(img);
