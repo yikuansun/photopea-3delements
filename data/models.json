@@ -3,30 +3,30 @@
     "modelname": "Photopea",
     "authorname": "3D name Photopeq",
     "thumbnail": {
-      "url": "https://raw.githubusercontent.com/yikuansun/photopea-3delements/master/data/models/Photopea/thumbnail.png"
+      "url": "data/models/Photopea/thumbnail.png"
     },
     "model": {
-      "url": "https://raw.githubusercontent.com/yikuansun/photopea-3delements/master/data/models/Photopea/model.glb"
+      "url": "data/models/Photopea/model.glb"
     }
   },
   {
     "modelname": 18,
     "authorname": 18,
     "thumbnail": {
-      "url": "https://raw.githubusercontent.com/yikuansun/photopea-3delements/master/data/models/18/thumbnail.png"
+      "url": "data/models/18/thumbnail.png"
     },
     "model": {
-      "url": "https://raw.githubusercontent.com/yikuansun/photopea-3delements/master/data/models/18/model.stl"
+      "url": "data/models/18/model.stl"
     }
   },
   {
     "modelname": "Avocado",
     "authorname": "Khronos Group",
     "thumbnail": {
-      "url": "https://raw.githubusercontent.com/yikuansun/photopea-3delements/master/data/models/Avocado/thumbnail.jpeg"
+      "url": "data/models/Avocado/thumbnail.jpeg"
     },
     "model": {
-      "url": "https://raw.githubusercontent.com/yikuansun/photopea-3delements/master/data/models/Avocado/model.glb"
+      "url": "data/models/Avocado/model.glb"
     }
   }
 ]
