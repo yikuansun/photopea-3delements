@@ -1,5 +1,21 @@
 [
   {
+    "modelname": 18,
+    "authorname": 18,
+    "thumbnail": {
+      "filename": "file.png",
+      "type": "image/png",
+      "size": 31933,
+      "url": "https://d33wubrfki0l68.cloudfront.net/71f5c3e6-442e-46da-9421-493e65835e50/file.png"
+    },
+    "model": {
+      "filename": "3D_Project (2).glb.stl",
+      "type": "application/vnd.ms-pki.stl",
+      "size": 113176,
+      "url": "https://d33wubrfki0l68.cloudfront.net/1b4894f4-f265-4bdc-a749-028a305fc2b5/3D_Project%20(2).glb.stl"
+    }
+  },
+  {
     "modelname": "Avocado",
     "authorname": "Khronos Group",
     "thumbnail": {
