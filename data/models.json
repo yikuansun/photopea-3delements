@@ -3,30 +3,30 @@
     "modelname": "Photopea",
     "authorname": "3D name Photopeq",
     "thumbnail": {
-      "url": "https://d33wubrfki0l68.cloudfront.net/fe33d7e2-5443-4307-a05d-89fbfef4f111/image.png"
+      "url": "https://raw.githubusercontent.com/yikuansun/photopea-3delements/master/data/models/Photopea/thumbnail.png"
     },
     "model": {
-      "url": "https://d33wubrfki0l68.cloudfront.net/68d7b7b9-e064-4d7a-9a54-b55fe15dd4df/3D_Project.glb"
+      "url": "https://raw.githubusercontent.com/yikuansun/photopea-3delements/master/data/models/Photopea/model.glb"
     }
   },
   {
     "modelname": 18,
     "authorname": 18,
     "thumbnail": {
-      "url": "https://d33wubrfki0l68.cloudfront.net/71f5c3e6-442e-46da-9421-493e65835e50/file.png"
+      "url": "https://raw.githubusercontent.com/yikuansun/photopea-3delements/master/data/models/18/thumbnail.png"
     },
     "model": {
-      "url": "https://d33wubrfki0l68.cloudfront.net/1b4894f4-f265-4bdc-a749-028a305fc2b5/3D_Project%20(2).glb.stl"
+      "url": "https://raw.githubusercontent.com/yikuansun/photopea-3delements/master/data/models/18/model.stl"
     }
   },
   {
     "modelname": "Avocado",
     "authorname": "Khronos Group",
     "thumbnail": {
-      "url": "https://d33wubrfki0l68.cloudfront.net/63b12988-4b7d-4180-905c-64d9360f0090/screenshot.jpg"
+      "url": "https://raw.githubusercontent.com/yikuansun/photopea-3delements/master/data/models/Avocado/thumbnail.jpeg"
     },
     "model": {
-      "url": "https://d33wubrfki0l68.cloudfront.net/85c5bc2d-d645-442f-9a53-777d5b3800d0/Avocado.glb"
+      "url": "https://raw.githubusercontent.com/yikuansun/photopea-3delements/master/data/models/Avocado/model.glb"
     }
   }
 ]
