@@ -3,15 +3,9 @@
     "modelname": "Photopea",
     "authorname": "3D name Photopeq",
     "thumbnail": {
-      "filename": "image.png",
-      "type": "image/png",
-      "size": 22331,
       "url": "https://d33wubrfki0l68.cloudfront.net/fe33d7e2-5443-4307-a05d-89fbfef4f111/image.png"
     },
     "model": {
-      "filename": "3D_Project.glb",
-      "type": "application/octet-stream",
-      "size": 84596,
       "url": "https://d33wubrfki0l68.cloudfront.net/68d7b7b9-e064-4d7a-9a54-b55fe15dd4df/3D_Project.glb"
     }
   },
@@ -19,15 +13,9 @@
     "modelname": 18,
     "authorname": 18,
     "thumbnail": {
-      "filename": "file.png",
-      "type": "image/png",
-      "size": 31933,
       "url": "https://d33wubrfki0l68.cloudfront.net/71f5c3e6-442e-46da-9421-493e65835e50/file.png"
     },
     "model": {
-      "filename": "3D_Project (2).glb.stl",
-      "type": "application/vnd.ms-pki.stl",
-      "size": 113176,
       "url": "https://d33wubrfki0l68.cloudfront.net/1b4894f4-f265-4bdc-a749-028a305fc2b5/3D_Project%20(2).glb.stl"
     }
   },
@@ -35,15 +23,9 @@
     "modelname": "Avocado",
     "authorname": "Khronos Group",
     "thumbnail": {
-      "filename": "screenshot.jpg",
-      "type": "image/jpeg",
-      "size": 3414,
       "url": "https://d33wubrfki0l68.cloudfront.net/63b12988-4b7d-4180-905c-64d9360f0090/screenshot.jpg"
     },
     "model": {
-      "filename": "Avocado.glb",
-      "type": "application/octet-stream",
-      "size": 8328156,
       "url": "https://d33wubrfki0l68.cloudfront.net/85c5bc2d-d645-442f-9a53-777d5b3800d0/Avocado.glb"
     }
   }
