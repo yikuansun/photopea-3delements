@@ -1,5 +1,15 @@
 [
   {
+    "modelname": 2,
+    "authorname": 2,
+    "thumbnail": {
+      "url": "data/models/2/thumbnail.png"
+    },
+    "model": {
+      "url": "data/models/2/model.glb"
+    }
+  },
+  {
     "modelname": "Photopea",
     "authorname": "3D name Photopeq",
     "thumbnail": {
