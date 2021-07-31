@@ -1,5 +1,15 @@
 [
   {
+    "modelname": "sian",
+    "authorname": "Lucas",
+    "thumbnail": {
+      "url": "data/models/sian/thumbnail.jpg"
+    },
+    "model": {
+      "url": "data/models/sian/model.glb"
+    }
+  },
+  {
     "modelname": 2,
     "authorname": 2,
     "thumbnail": {
