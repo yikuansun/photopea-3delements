@@ -60,7 +60,7 @@ async function fetchHTTP(url) {
 }
 
 async function getLibraryData() {
-    var library2 = JSON.parse(await fetchHTTP("data/models.json"));
+    var library2 = JSON.parse(await fetchHTTP("https://yikuansun.github.io/3db/models.json"));
     var out = [];
     for (var model of library2) {
         var data = {};
