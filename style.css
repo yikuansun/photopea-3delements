@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: var(--app-bg-color);
+    /*background-color: var(--app-bg-color);*/
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     user-select: none;
