@@ -19,7 +19,7 @@ button {
     padding-bottom: 6.9px;
     padding-left: 12px;
     padding-right: 12px;
-    transition: 0.5s;
+    transition: color 0.5s;
     outline: none!important;
 }
 
@@ -68,7 +68,7 @@ model-viewer {
     width: 100vw;
     height: 100vh;
     display: none;
-    transition: 1s;
+    transition: display 1s;
 }
 
 #libraryselect {
@@ -79,7 +79,7 @@ model-viewer {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    transition: 1s;
+    transition: left 1s;
 }
 
 #library_content {
@@ -101,7 +101,7 @@ model-viewer {
     line-height: 15px;
     border-radius: 50%;
     border: 2px solid white;
-    transition: 1s;
+    transition: transform 1s;
 }
 
 #x:hover {
