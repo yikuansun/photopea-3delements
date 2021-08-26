@@ -7,6 +7,7 @@ function pickModel() {
         onUploadDone: function(e) {
             console.log(e);
             document.querySelector("input[name=model]").value = e.filesUploaded[0].url;
+            document.querySelector("#modelLabel").innerText = e.filesUploaded[0].filename;
         }
     });
     picker.open();
@@ -20,6 +21,7 @@ function pickThumb() {
         onUploadDone: function(e) {
             console.log(e);
             document.querySelector("input[name=thumbnail]").value = e.filesUploaded[0].url;
+            document.querySelector("#thumbLabel").innerText = e.filesUploaded[0].filename;
         }
     });
     picker.open();

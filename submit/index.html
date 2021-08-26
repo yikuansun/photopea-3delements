@@ -19,10 +19,12 @@
             <label>Model Thumbnail:</label>
             <input type="hidden" name="thumbnail" required />
             <button type="button" onclick="pickThumb()">Pick file</button>
+            <span id="thumbLabel"></span>
             <br />
             <label>Model gltf/glb:</label>
             <input type="hidden" name="model" required />
             <button type="button" onclick="pickModel()">Pick file</button>
+            <span id="modelLabel"></span>
             <br />
             <p style="display: none;">
                 <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
