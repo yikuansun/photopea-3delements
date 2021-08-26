@@ -1,1 +1,1 @@
-const client = filestack.init(YOUR_API_KEY);
+const client = filestack.init("ABNI3B81LSv6GvcqZyIOcz");
