@@ -33,12 +33,12 @@ function uploadFromDevice() {
         var isZip = file.name.split(".").pop() == "zip";
         fileReader.onloadend = function(e) {
             if (!isZip) {
-            var arrayBuffer = e.target.result;
-            var fileType = input.accept;
-            var blob = new Blob([arrayBuffer], { type: fileType });
-            var URI = URL.createObjectURL(blob);
-            console.log(URI);
-            modelViewer.src = URI;
+                var arrayBuffer = e.target.result;
+                var fileType = input.accept;
+                var blob = new Blob([arrayBuffer], { type: fileType });
+                var URI = URL.createObjectURL(blob);
+                console.log(URI);
+                modelViewer.src = URI;
             }
             else {
                 var unzipped = UZIP.parse(e.target.result);
