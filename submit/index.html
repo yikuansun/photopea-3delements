@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Submit a 3D model to Photopea</title>
-        <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+        <script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
     </head>
     <body>
         <h3>Submit a model</h3>
@@ -17,10 +17,12 @@
             <input type="text" name="authorname" required />
             <br />
             <label>Model Thumbnail:</label>
-            <input type="file" name="thumbnail" accept="image/png, image/jpeg, image/bmp" required />
+            <input type="hidden" name="thumbnail" required />
+            <button type="button">Pick file</button>
             <br />
             <label>Model gltf/glb:</label>
-            <input type="file" name="model" accept="model/gltf+json, model/gltf-binary" required />
+            <input type="hidden" name="model" required />
+            <button type="button" onclick="pickModel()">Pick file</button>
             <br />
             <p style="display: none;">
                 <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
