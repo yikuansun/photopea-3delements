@@ -30,13 +30,27 @@ function uploadFromDevice() {
     input.addEventListener("change", function() {
         var file = this.files[0];
         var fileReader = new FileReader();
+        var isZip = file.name.split(".").pop() == "zip";
         fileReader.onloadend = function(e) {
+            if (!isZip) {
             var arrayBuffer = e.target.result;
             var fileType = input.accept;
             var blob = new Blob([arrayBuffer], { type: fileType });
             var URI = URL.createObjectURL(blob);
             console.log(URI);
             modelViewer.src = URI;
+            }
+            else {
+                var unzipped = UZIP.parse(e.target.result);
+                for (var fn in unzipped) {
+                    if (["glb", "gltf"].includes(fn.split(".").pop().toLowerCase())) {
+                        var blob = new Blob([unzipped[fn]]);
+                        var URI = URL.createObjectURL(blob);
+                        console.log(URI);
+                        modelViewer.src = URI;
+                    }
+                }
+            }
             input.remove();
         };
         fileReader.readAsArrayBuffer(file);
