@@ -11,3 +11,16 @@ function pickModel() {
     });
     picker.open();
 }
+
+function pickThumb() {
+    var picker = client.picker({
+        maxFiles: 1,
+        minFiles: 1,
+        accept: "image/*",
+        onUploadDone: function(e) {
+            console.log(e);
+            document.querySelector("input[name=thumbnail]").value = e.filesUploaded[0].url;
+        }
+    });
+    picker.open();
+}
