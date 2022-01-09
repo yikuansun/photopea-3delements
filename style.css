@@ -139,3 +139,25 @@ model-viewer {
     outline: none!important;
     box-shadow: 0 0 0 3px rgba(54, 95, 199, 0.5);
 }
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #222222;
+    border-radius: 15px;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #22222269;
+    opacity: 0.2;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+}
