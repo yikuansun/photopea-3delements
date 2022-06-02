@@ -91,17 +91,10 @@ model-viewer {
 
 #x {
     position: absolute;
-    font-family: 'Comic Sans MS', cursive, Arial, sans-serif;
-    color: white;
-    top: 13.8px;
-    left: 13.8px;
-    padding: 5px;
-    width: 15px;
-    height: 15px;
-    text-align: center;
-    line-height: 15px;
-    border-radius: 50%;
-    border: 2px solid white;
+    top: 10px;
+    left: 10px;
+    width: 32px;
+    height: 32px;
     transition: transform 1s;
 }
 
