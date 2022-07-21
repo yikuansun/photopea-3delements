@@ -79,6 +79,7 @@ async function getLibraryData() {
     for (var model of library2) {
         var data = {};
         data.name = model.modelname.toString();
+        data.author = model.authorname;
         data.thumb = model.thumbnail.url;
         data.file = model.model.url;
         out.push(data);
@@ -92,6 +93,7 @@ getLibraryData().then(function(library) {
         img.style.backgroundImage = `url("${model.thumb}")`;
         img.style.cursor = "pointer";
         img.alt = model.name;
+        img.title = model.name + " by " + model.author;
         img.addEventListener("click", new Function(`
             console.log("${model.file}");
             modelViewer.src = "${model.file}";
